@@ -1,5 +1,6 @@
 import { useNuxtApp } from "nuxt/app";
 import { StoreDefinition } from "pinia";
+import {useRuntimeConfig} from '#imports';
 
 export function useWeatherWidgetComposable() {
 	const nuxtApp = useNuxtApp();
