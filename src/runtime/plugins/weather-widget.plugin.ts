@@ -1,6 +1,7 @@
 import { defineNuxtPlugin } from '#app';
 import { defineStore } from 'pinia';
-import { WeatherData } from './weather-widget.plugin';
+import { WeatherData } from './../models/weather-data.model';
+import { weatherApiUrl } from './../models/weather-api-url.model';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
 	const weatherWidgetStore = defineStore('weatherWidget', {
@@ -27,7 +28,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 		actions: {
 			async changeLocation(location: string) {
 
-				const { data } = await useFetch<WeatherData>(`http://api.weatherapi.com/v1/current.json?key=1b7ef8ce906843ff9aa194302231207&q=${location}&aqi=yes`);
+				const { data } = await useFetch<WeatherData>(weatherApiUrl(location));
 
 				if (data?.value) {
 					const { value: { location, current } } = data;
