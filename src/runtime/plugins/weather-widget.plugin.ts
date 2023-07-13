@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app';
+import { defineNuxtPlugin, useFetch } from '#app';
 import { defineStore } from 'pinia';
 import { WeatherData } from './../models/weather-data.model';
 import { weatherApiUrl } from './../models/weather-api-url.model';

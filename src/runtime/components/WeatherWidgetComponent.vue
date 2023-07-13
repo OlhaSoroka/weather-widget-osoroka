@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import {useWeatherWidgetComposable} from '#imports';
+import {useWeatherWidgetComposable} from '#app';
 const { weatherWidgetStore } = useWeatherWidgetComposable();
 
 </script>
