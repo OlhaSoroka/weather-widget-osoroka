@@ -1,6 +1,6 @@
 <template>
 	<div class=" ww-flex ww-justify-center">
-		<div class="ww-w-56 ww-text-center ww-bg-neutral-200 ww-p-5 ww-shadow-md ww-rounded-3xl">
+		<div :class="[weatherWidgetStore.isDay ? 'ww-bg-sky-200':'ww-bg-slate-900 ww-text-white']" class="ww-w-72 ww-text-center ww-bg-neutral-200 ww-p-10 ww-shadow-md ww-rounded-3xl">
 			<div class="ww-font-bold ww-text-2xl">{{ weatherWidgetStore.location }}</div>
 			<div class=" ww-flex ww-justify-center ww"><img :src="weatherWidgetStore.icon" /></div>
 			<div class="ww-font-bold">{{ weatherWidgetStore.temp }}</div>
