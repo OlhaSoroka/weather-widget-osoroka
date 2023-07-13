@@ -4,7 +4,7 @@ export interface ModuleOptions {}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@nuxt-module/weather-widget-osoroka',
+    name: 'weather-widget-osoroka',
     configKey: 'weatherWidgetOsoroka',
     compatibility: {
       nuxt: '^3.0.0'

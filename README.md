@@ -1,1 +1,1 @@
-# @nuxt-module/weather-widget-osoroka
+# weather-widget-osoroka
