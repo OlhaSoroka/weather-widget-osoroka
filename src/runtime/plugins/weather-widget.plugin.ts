@@ -38,6 +38,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 					this._humidity = current.humidity;
 					this._feelsLike = current.feelslike_c;
 					this._icon = current.condition.icon;
+					this._isDay= current.is_day;
 				}
 			},
 
