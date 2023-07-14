@@ -27,7 +27,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
 		actions: {
 			async changeLocation(location: string) {
-
+				this._location = location;
 				const { data } = await useFetch<WeatherData>(weatherApiUrl(location));
 
 				if (data?.value) {
